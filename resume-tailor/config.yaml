@@ -1,0 +1,91 @@
+tailor:
+  model: gemini-2.5-flash   # free tier works; change if Google renames/retires it
+  port: 8765                # job-alerts' "Tailor" button links here
+  max_total_bullets: 14     # experience bullets across all roles (~1-2 pages)
+  max_projects: 2
+  keyword_target: [25, 35]  # role keywords on the resume; below = invisible in searches, above = looks stuffed
+  jobs_json: ../job-alerts/data/jobs.json   # lets the Tailor button prefill title/company/JD
+
+# DOCX look. Stays ATS-safe: one column, real text, no tables/text boxes/headers/footers.
+template:
+  font: Calibri             # safe choices: Calibri, Arial, Garamond, Cambria
+  body_size: 10.5
+  name_size: 20
+  heading_size: 11.5
+  accent: "1F3864"          # navy; use "000000" for all black
+  page: A4                  # A4 (India/EU) or Letter (US)
+  margin_in: 0.6
+
+# Keyword vocabulary: canonical name -> aliases. Used to find JD keywords, score bullets and block
+# AI rewrites that add skills the original bullet does not support. Skills in master.yaml are added automatically.
+skills:
+  python: [python]
+  sql: [sql, t-sql, pl/sql]
+  java: [java, spring boot]
+  "c#": ["c#", csharp]
+  ".net": [".net", asp.net, dotnet]
+  angular: [angular]
+  react: [react, react.js]
+  typescript: [typescript]
+  langchain: [langchain]
+  langgraph: [langgraph]
+  langsmith: [langsmith]
+  llamaindex: [llamaindex, llama index]
+  llm: [llm, llms, large language model, large language models, foundation model, foundation models]
+  genai: [generative ai, genai, gen ai, gen-ai]
+  rag: [rag, retrieval augmented generation, retrieval-augmented generation]
+  agents: [ai agents, agentic, agentic ai, multi-agent, multi agent, autonomous agents]
+  prompt engineering: [prompt engineering]
+  embeddings: [embeddings, embedding, sentence transformers, sentence-transformers]
+  vector databases: [vector database, vector databases, vector db, vector store, pinecone, qdrant, weaviate, chroma, faiss, pgvector, milvus, opensearch]
+  llm evaluation: [llm evaluation, evals, evaluation datasets, golden dataset, ragas, deepeval]
+  fine-tuning: [fine-tuning, fine tuning, finetuning, lora, qlora, peft]
+  mcp: [mcp, model context protocol]
+  openai: [openai, gpt-4, gpt-4o, chatgpt]
+  claude: [claude, anthropic]
+  gemini: [gemini]
+  hugging face: [hugging face, huggingface]
+  aws: [aws, amazon web services]
+  bedrock: [bedrock, amazon bedrock]
+  sagemaker: [sagemaker]
+  ec2: [ec2]
+  ecs: [ecs, fargate]
+  s3: [s3]
+  lambda: [aws lambda, lambda functions]
+  cloudwatch: [cloudwatch]
+  azure: [azure, azure openai]
+  gcp: [gcp, google cloud, vertex ai]
+  docker: [docker, containers]
+  kubernetes: [kubernetes, k8s, eks, aks, gke]
+  "ci/cd": ["ci/cd", github actions, jenkins, azure devops]
+  git: [git, github, gitlab, bitbucket]
+  terraform: [terraform]
+  fastapi: [fastapi]
+  flask: [flask]
+  django: [django]
+  rest apis: [rest api, rest apis, restful]
+  microservices: [microservices]
+  async python: [asyncio, async python, asynchronous python]
+  pytorch: [pytorch]
+  tensorflow: [tensorflow, keras]
+  scikit-learn: [scikit-learn, sklearn]
+  pandas: [pandas, numpy]
+  machine learning: [machine learning]
+  deep learning: [deep learning]
+  nlp: [nlp, natural language processing]
+  computer vision: [computer vision, opencv, object detection, yolo, yolov5]
+  mlops: [mlops, llmops, mlflow]
+  spark: [spark, pyspark, databricks]
+  airflow: [airflow]
+  kafka: [kafka]
+  snowflake: [snowflake]
+  oracle: [oracle, oracle forms]
+  sql server: [sql server, mssql]
+  postgresql: [postgresql, postgres]
+  mongodb: [mongodb]
+  power bi: [power bi, tableau]
+  code modernization: [code modernization, legacy modernization, application modernization, code migration, legacy migration]
+  observability: [appdynamics, observability, datadog, dynatrace, splunk, grafana]
+  jira: [jira]
+  servicenow: [servicenow, service now]
+  agile: [agile, scrum]

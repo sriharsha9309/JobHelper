@@ -1,0 +1,148 @@
+# Master resume = the ONLY source of facts for tailored resumes. Keep every line TRUE.
+# Built from Harsha-AI_Engineer.pdf + details confirmed in chat (Oct 2026).
+# Bullets containing <...> are never used until you replace the placeholder with real facts.
+# tags = terms a bullet honestly supports; AI rewrites may only use skills found in a bullet's text or tags.
+
+contact:
+  name: "Sri Harsha Pillalamarri"
+  email: "sriharshap1718@gmail.com"
+  phone: "+91 9550900868"
+  location: "Chennai, India"
+  links:
+    - "https://github.com/sriharsha9309"
+    - "https://www.linkedin.com/in/sri-harsha-pillalamarri-67801a241/"
+    # add your LinkedIn URL exactly as shown on your profile, e.g. "https://www.linkedin.com/in/<your-slug>"
+
+headline: "Generative AI Engineer"
+years: "2.5"        # CONFIRM - the PDF value was unreadable; Jun 2024 to Oct 2026 is ~2.3 years
+
+summary_points:
+  - "Generative AI Engineer at Tata Consultancy Services (TCS) building enterprise generative AI solutions for North American BFSI clients."
+  - "Designed agentic AI workflows with LangChain and LangGraph for legacy application modernization, code migration, business rule extraction and automated validation."
+  - "Hands-on with Deep Agents, prompt engineering, embeddings, LLM evaluation, Amazon Bedrock, FastAPI and AWS cloud services."
+  - "Strong production debugging background from L2.5 support with AppDynamics monitoring and root-cause analysis."
+  - "Certified Claude Certified Architect and AWS Certified Data Engineer - Associate."
+
+skills:
+  Programming Languages: [Python, Cpp, SQL, Java]
+  Generative AI: [LangChain, LangGraph, Prompt Engineering, Agentic AI, Deep Agents, Retrieval Augmented Generation (RAG), Sentence Transformers, Embeddings, LLM Evaluation, DeepEval]
+  Backend: [FastAPI, REST APIs, Async Python]
+  Cloud: [AWS EC2, ECS, SageMaker, Bedrock, CloudWatch]
+  Databases: [Oracle, SQL Server, SSMS, Snowflake]
+  Machine Learning / Computer Vision: [Machine Learning, NLP,YOLOv5, Object Detection, Deep Learning, Computer Vision]
+  Frameworks & Tools: [.NET, Angular, Git, AppDynamics, Jira, ServiceNow, Agile/Scrum]
+
+experience:
+  - id: tcs
+    company: "Tata Consultancy Services (TCS)"
+    title: "Systems Engineer (Generative AI)"   # official title stays; the JD title goes in the headline instead
+    location: "Chennai, India"
+    start: "2024-06"
+    end: "present"
+    min_bullets: 4
+    max_bullets: 8
+    bullets:
+      # --- from the PDF ---
+      - id: multi-agent
+        text: "Designed and implemented LangGraph-based multi-agent orchestration for legacy code modernization for a US insurance client."
+        tags: [GenAI, agentic AI, multi-agent, LLM, code modernization]
+      - id: bedrock-integration
+        text: "Integrated foundation models through Amazon Bedrock with LangChain-based orchestration pipelines for AI-assisted code conversion and modernization."
+        tags: [GenAI, LLM, AWS, code modernization]
+      - id: legacy-demos
+        text: "Delivered legacy modernization demonstrations across Delphi, PowerBuilder, Oracle Forms and C#/.NET applications, targeting Java and modern application architectures."
+        tags: [GenAI, code modernization, code migration]
+      - id: golden-datasets
+        text: "Created golden evaluation datasets of reference modernization outputs to validate AI-generated code and measure the quality and correctness of modernization workflows."
+        tags: [LLM evaluation, GenAI, regression evaluation]
+      - id: deepeval
+        text: "Built DeepEval-based evaluations for a code conversion workflow to score the quality of LLM-generated code."
+        tags: [LLM evaluation, LLM, GenAI]
+      - id: enterprise-initiatives
+        text: "Contributed to enterprise modernization initiatives including .NET version upgrades, Oracle Forms business rule extraction and AI-assisted C# to Angular migration."
+        tags: [code modernization, GenAI]
+      - id: fastapi-async
+        text: "Exposed AI modernization capabilities through FastAPI and asynchronous Python backend APIs, integrating LLM workflows with enterprise applications."
+        tags: [REST APIs, LLM, GenAI]
+      - id: aws-services
+        text: "Used AWS EC2, ECS, SageMaker and CloudWatch to deploy, experiment with, monitor and troubleshoot AI services."
+        tags: [AWS]
+      # --- from your description of the production pipeline ---
+      - id: parser-chunking
+        text: "Preprocessed legacy source code with language parsers into structured JSON and chunked it for LLM conversion, reducing context loss on large files."
+        tags: [code parsing, LLM, GenAI]
+      - id: rolling-memory
+        text: "Implemented rolling memory across sequential LLM calls so each code chunk is converted with the context of earlier conversions."
+        tags: [LLM, GenAI, agentic AI]
+      - id: map-reduce
+        text: "Applied a map-reduce strategy to group related files before chunking, improving converted code quality and reducing information loss."
+        tags: [LLM, GenAI]
+      - id: business-docs
+        text: "Generated code-based business understanding documents for developers from legacy codebases using LLMs."
+        tags: [GenAI, LLM, business rule extraction]
+      - id: metrics
+        text: "Applied the workflow to legacy applications of 70-80K lines of code each, generating the target application structure and most business functionality, with use-case-specific logic completed by the team."
+        tags: [code modernization, GenAI, LLM]
+      # --- L2.5 production support (same TCS tenure) ---
+      - id: support-incidents
+        text: "Provided L2.5 production support for enterprise applications, debugging incidents and performing root-cause analysis."
+        tags: [observability]
+      - id: support-monitoring
+        text: "Monitored application health and performance with AppDynamics and AWS CloudWatch to troubleshoot production issues."
+        tags: [observability, AWS]
+      - id: support-itsm
+        text: "Managed incident, problem and change requests in ServiceNow and tracked sprint work on Jira Scrum boards."
+        tags: [ServiceNow, Jira, Agile/Scrum]
+
+projects:
+  - id: rag-assistant
+    name: "Customer Support RAG Assistant"
+    tech: [Python, LangChain, RAG, Sentence Transformers, FastAPI]
+    link: ""
+    max_bullets: 3
+    bullets:
+      - id: rag-1
+        text: "Built a Retrieval-Augmented Generation (RAG) customer support assistant that answers queries from support documentation and knowledge-base content."
+        tags: [GenAI, LLM]
+      - id: rag-2
+        text: "Implemented document ingestion, preprocessing, chunking and Sentence Transformer embeddings to create a searchable knowledge base."
+        tags: [embeddings]
+      - id: rag-3
+        text: "Developed semantic retrieval to surface relevant support articles, troubleshooting guides, product documentation and FAQs for user queries."
+        tags: [RAG, embeddings]
+      - id: rag-4
+        text: "Exposed the RAG pipeline through FastAPI REST APIs for integration with customer-support applications."
+        tags: [REST APIs]
+
+  - id: traffic
+    name: "Traffic Detection and Optimization"
+    tech: [Python, YOLOv5, Computer Vision, Deep Learning]
+    link: ""
+    max_bullets: 3
+    bullets:
+      - id: traffic-1
+        text: "Developed a computer-vision traffic monitoring and optimization system using the YOLOv5 object detection algorithm."
+        tags: [deep learning]
+      - id: traffic-2
+        text: "Processed traffic video and image data to detect and classify vehicles and analyze vehicle density across road intersections."
+        tags: [computer vision, deep learning]
+      - id: traffic-3
+        text: "Applied object-detection results to estimate traffic conditions and support dynamic traffic-flow optimization."
+        tags: [computer vision]
+      - id: traffic-4
+        text: "Worked on deep-learning object detection, model inference, data preprocessing and evaluation of detection results."
+        tags: [computer vision]
+      - id: traffic-5
+        text: "Analyzed vehicle counts and traffic patterns to support more efficient allocation of traffic signal timing."
+
+education:
+  - degree: "Bachelor of Technology in Computer Science and Engineering (Data Science)"
+    institution: "Gayatri Vidya Parishad College of Engineering"
+    start: "2020"
+    end: "2024"
+    grade: "CGPA: 8.8"
+
+certifications:
+  - "Claude Certified Architect"
+  - "AWS Certified Data Engineer - Associate"
+  - "Google Cloud Computing Foundations Certificate (Google Skills)"

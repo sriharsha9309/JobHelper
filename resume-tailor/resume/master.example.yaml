@@ -1,0 +1,54 @@
+# Template for resume/master.yaml (the real file is git-ignored). Keep every line TRUE.
+# Bullets containing <...> are never used. Dates: "YYYY-MM" or "present".
+# tags = terms a bullet honestly supports; AI rewrites may only use skills found in a bullet's text or tags.
+
+contact:
+  name: "<Your Name>"
+  email: "<you@example.com>"
+  phone: "<+91 XXXXX XXXXX>"
+  location: "<City, Country>"
+  links: []
+
+headline: "<Default headline, e.g. Generative AI Engineer>"
+years: "<2+>"
+
+summary_points:
+  - "<One true sentence about your focus and impact>"
+
+skills:
+  Programming Languages: [Python, SQL]
+  Generative AI: [LangChain, LangGraph, RAG]
+
+experience:
+  - id: job1
+    company: "<Company>"
+    title: "<Official title>"
+    location: "<City, Country>"
+    start: "<YYYY-MM>"
+    end: "present"
+    min_bullets: 3
+    max_bullets: 6
+    bullets:
+      - id: job1-a
+        text: "<Action verb + what you built + tech + result>"
+        tags: [GenAI]
+
+projects:
+  - id: proj1
+    name: "<Project name>"
+    tech: [Python]
+    link: ""
+    max_bullets: 3
+    bullets:
+      - id: proj1-a
+        text: "<What it does + one metric>"
+
+education:
+  - degree: "<Degree>"
+    institution: "<College>"
+    start: ""
+    end: ""
+    grade: ""
+
+certifications:
+  - "<Exact certification name>"
