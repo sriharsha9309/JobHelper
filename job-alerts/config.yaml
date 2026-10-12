@@ -1,0 +1,152 @@
+# Job alerts configuration. Secrets live in .env, never here.
+
+max_age_days: 30            # ignore postings older than this (when the source gives a date)
+seen_retention_days: 180    # how long a found job is remembered so it is not shown as new again
+resume_path: resume/resume.tex
+
+page:
+  show_days: 14             # jobs.html shows matches first found in the last N days
+
+title:
+  include:
+    - ai
+    - artificial intelligence
+    - genai
+    - gen ai
+    - generative
+    - llm
+    - llmops
+    - ml
+    - mlops
+    - machine learning
+    - deep learning
+    - nlp
+    - natural language
+    - conversational ai
+    - agentic
+    - ai agent
+    - ai agents
+    - prompt engineer
+    - data scientist
+    - data science
+    - gen-ai
+    - applied scientist
+    - research engineer
+    - computer vision
+  exclude:
+    - senior
+    - sr
+    - lead
+    - principal
+    - staff
+    - manager
+    - director
+    - head
+    - vp
+    - vice president
+    - architect
+    - intern
+    - internship
+    - iii
+    - iv
+    - sales
+    - account executive
+    - marketing
+    - recruiter
+    - counsel
+    - designer
+    - customer success
+  # Per-company title_profile (companies.csv). Allowed phrases are removed before the exclude check,
+  # so a bank's "Assistant Vice President - GenAI" passes but "Vice President" / "Senior Manager" do not.
+  profiles:
+    tech:
+      allow: []
+    consulting:
+      allow: [senior consultant, senior associate, senior analyst, senior software engineer, senior engineer,
+              senior data scientist, senior systems engineer, senior ai engineer, senior ml engineer, senior genai engineer]
+    bank:
+      allow: [assistant vice president, avp, deputy manager, assistant manager, manager]
+
+experience:
+  max_years: 3                 # drop jobs whose stated minimum experience is above this
+  keep_when_not_stated: true   # keep jobs that do not mention years of experience
+
+locations:
+  include:
+    Bengaluru: [bengaluru, bangalore]
+    Hyderabad: [hyderabad]
+    Chennai: [chennai]
+    Pune: [pune]
+    Delhi NCR: [gurugram, gurgaon, noida, new delhi, delhi, ncr]
+    Mumbai: [mumbai]
+    Denmark: [denmark, copenhagen, københavn, kobenhavn, aarhus]
+  remote_words: [remote, work from home, wfh, anywhere]
+  remote_requires_any: [india, apac]    # "Remote" only counts if one of these also appears
+  country_only:
+    India (city not stated): [india]
+
+# Master company list. ats = greenhouse | lever | ashby | smartrecruiters | workday | manual (blank = not yet detected).
+# Run `python -m job_alerts --detect` to fill ats/ats_id automatically.
+companies_csv: companies.csv
+
+# Manual companies rotate into the "due today" list in companies.html / jobs.html: each is due once per N days by priority.
+rotation_days:
+  A: 10
+  B: 20
+  C: 30
+
+workday:
+  queries: [AI, machine learning, GenAI, LLM, data scientist]
+  pages: 1                  # 20 results per page per query
+
+adzuna:
+  enabled: true
+  countries: [in]          # Adzuna country codes; Denmark is covered via company boards above
+  max_days_old: 3
+  pages: 2                 # 50 results per page per query
+  queries:
+    - generative ai
+    - genai engineer
+    - llm engineer
+    - ai engineer
+    - machine learning engineer
+    - langchain
+    - nlp engineer
+
+# Skill vocabulary used for resume match scoring: canonical name -> aliases.
+skills:
+  python: [python]
+  sql: [sql, postgres, postgresql, mysql]
+  java: [java, spring boot]
+  langchain: [langchain]
+  langgraph: [langgraph]
+  llm: [llm, llms, large language model, large language models]
+  genai: [generative ai, genai, gen ai]
+  rag: [rag, retrieval augmented generation, retrieval-augmented generation]
+  agents: [ai agents, agentic, multi-agent, autonomous agents]
+  prompt engineering: [prompt engineering]
+  aws: [aws, amazon web services]
+  bedrock: [bedrock]
+  sagemaker: [sagemaker]
+  gcp: [gcp, google cloud, vertex ai]
+  azure: [azure, azure openai]
+  docker: [docker]
+  kubernetes: [kubernetes, k8s]
+  fastapi: [fastapi]
+  pytorch: [pytorch]
+  tensorflow: [tensorflow, keras]
+  hugging face: [hugging face, huggingface]
+  nlp: [nlp, natural language processing]
+  machine learning: [machine learning]
+  deep learning: [deep learning]
+  fine-tuning: [fine-tuning, fine tuning, finetuning, lora, peft]
+  vector databases: [vector database, vector databases, vector db, pinecone, qdrant, weaviate, chroma, faiss, pgvector, milvus]
+  mcp: [mcp, model context protocol]
+  llm evaluation: [llm evaluation, evals, ragas, deepeval]
+  mlops: [mlops, llmops]
+  spark: [spark, pyspark]
+  airflow: [airflow]
+  ci/cd: [ci/cd, github actions, jenkins]
+  angular: [angular]
+  observability: [appdynamics, observability, datadog, cloudwatch]
+  c++: [c++]
